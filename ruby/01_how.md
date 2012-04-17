@@ -22,12 +22,11 @@ We need to support long running requests on a single ruby process and support mu
       EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8080) do |ws|
         ws.onopen {
           puts "WebSocket connection open"
-
-        # publish message to the client
           ws.send "Hello Client"
         }
 
         ws.onclose { puts "Connection closed" }
+
         ws.onmessage { |msg|
           puts "Recieved message: #{msg}"
           ws.send "Pong: #{msg}"
@@ -38,8 +37,8 @@ We need to support long running requests on a single ruby process and support mu
 !SLIDE smbullets
 # Pusher.com
 
-- Pusher.com is a hosted API for quickly adding the speed of WebSockets to your app
 - Pusher is built on em-websocket
+- Pusher.com is a hosted API for quickly adding the speed of WebSockets to your app
 
 !SLIDE smbullets
 # Cramp
@@ -96,7 +95,7 @@ Then
 !SLIDE
 # Sinatra & SSE
 
-    @@@ Ruby
+    @@@ Ruby SmallCode
     get "/chat" do
       content_type 'text/event-stream'
       stream(:keep_open) { |out|

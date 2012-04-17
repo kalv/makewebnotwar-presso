@@ -3,6 +3,7 @@
 
     @@@ Javascript
     var source = new EventSource('/stream');
+
     source.onmessage = function (event) {
       alert(event.data);
     };
@@ -31,15 +32,15 @@ Send 'event' name before data
 !SLIDE
 # Handling specific events
 
-Set up event listeners to handle types of events
-
     @@@ Javascript
     var source = new EventSource('/stream');
+
     source.addEventListener(
       'newEntry'
       , newEntryHandler
       , false
     );
+
     source.addEventListener(
       'userFollowed'
       , addFollowHandler

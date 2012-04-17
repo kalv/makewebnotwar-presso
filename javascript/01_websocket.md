@@ -1,5 +1,5 @@
 !SLIDE
-# Websocket API
+# Javascript Websocket API
 
     @@@ Javascript
     var websocket =
@@ -18,7 +18,7 @@
     };
 
 !SLIDE
-# WebSocket API
+# Javascript WebSocket API
 
     @@@ Javascript
     webSocket.send("message");
