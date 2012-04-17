@@ -1,0 +1,9 @@
+{
+  "name": "HTML5 WebSockets & Server Sent Scokets coated in Ruby"
+  , "sections": [
+      {"section":"overview"}
+      ,{"section":"javascript"}
+      ,{"section":"ruby"}
+      ,{"section":"example"}
+    ]
+}
