@@ -14,20 +14,20 @@ Hello I'm @kalv from @goodbitsco
 !SLIDE smbullets
 # What's the problem?
 
-- Need fast updates from server to browser
+- We need fast communications between server & web browser
 - For things like Messaging/Games/Live Dashboards
 - Yeah sure what about AJAX polling?
-- Polling of HTTP requests creates un-needed overhead
+- Polling of HTTP requests creates un-needed overhead at scale
 - Lots of duplicated work
 
 !SLIDE smbullets
 # Hello WebSockets
 
+- Protocol standard RFC 6455 / HTML5 [W3C spec](http://dev.w3.org/html5/websockets/)
 - Persistent connections over HTTP. Goodbye "connecting" overhead.
 - Send and receive data. Dubbed "TCP for web"
 - Extension of HTTP, upgrades connection to allow full-duplex
 - Javascript Websocket API implemented in browsers.
-- Being standardized as RFC 6455
 
 !SLIDE smbullets
 # Websocket Compatibility
@@ -76,11 +76,12 @@ Hello I'm @kalv from @goodbitsco
 !SLIDE smbullets
 # Server-Sent Events (SSE)
 
+- W3C HTML5
 - First introduced in Opera back in 2006!
 - One way only, send data from Server to browser as **DOM Events**
 - Simply a long polling HTTP Request with "text/event-stream" content type
 - No need to upgrade HTTP connection
-- If you know [Comet]("https://en.wikipedia.org/wiki/Comet_(programming)"), this is an alternative
+- If you know [Comet]("https://en.wikipedia.org/wiki/Comet_(programming)"), this is the replacement
 
 !SLIDE smbullets
 # SSE Compatibility
@@ -113,4 +114,4 @@ Hello I'm @kalv from @goodbitsco
 - What do you need? Do you need full-duplex communication?
 - Dashboards/Notifications = SSE
 - Messaging Apps/Games = WebSocket
-- imho: Seems easier right now to use SSE
+- imho: Seems easier right now to use SSE for most apps
